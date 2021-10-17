@@ -17,9 +17,10 @@ public class SfgDiApplication {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		//I can actually ask that context for an instance of my controller
 		MyController myController = (MyController) ctx.getBean("myController");
-		String greeting = myController.sayHello();
 
-		System.out.println(greeting);
+
+		System.out.println("--------- Primary bean");
+		System.out.println(myController.sayHello());
 
 		//******For dependency injection with spring framework*******
 		System.out.println("-------- Property");

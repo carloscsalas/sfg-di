@@ -9,7 +9,11 @@ import guru.springframework.sfgdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+/*so through this, now we are overriding the spring boot default of looking in just
+* that home package where the main class lives and now we are telling it to look here and in this other package*/
+@ComponentScan(basePackages = {"guru.springframework.sfgdi","guru.springframework.pets"})
 @SpringBootApplication
 public class SfgDiApplication {
 

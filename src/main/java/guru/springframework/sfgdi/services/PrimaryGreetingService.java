@@ -1,11 +1,10 @@
 package guru.springframework.sfgdi.services;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
 
 /*the qualifier will take precedence over primary*/
+/* for configuration class
 @Primary
-@Service
+@Service*/
 public class PrimaryGreetingService implements GreetingService{
     @Override
     public String sayGreeting() {

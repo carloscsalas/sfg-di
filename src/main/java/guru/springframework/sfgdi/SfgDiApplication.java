@@ -11,9 +11,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-/*so through this, now we are overriding the spring boot default of looking in just
-* that home package where the main class lives and now we are telling it to look here and in this other package*/
-@ComponentScan(basePackages = {"guru.springframework.sfgdi","guru.springframework.pets"})
+/*-----we no longer need that, because there's no components to scan there. I'm now saying that package is coming
+from air quotes "third party". So that's like a jar that we're importing into our class and we're going to be
+utilizing those as Spring beans.-------
+so through this, now we are overriding the spring boot default of looking in just
+* that home package where the main class lives and now we are telling it to look here and in this other package+/
+@ComponentScan(basePackages = {"guru.springframework.sfgdi","guru.springframework.pets"})*/
 @SpringBootApplication
 public class SfgDiApplication {
 
